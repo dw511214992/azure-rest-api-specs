@@ -24,4 +24,8 @@ overrides:
       property: "deviceName"
     set:
       - IdPortion: "DeviceServices"
+      - NameSwagger: "name"
+      - GoFieldName: "Name"
+      - GoVariableName: "name"
+      - SchemaName: "name"
 ```
