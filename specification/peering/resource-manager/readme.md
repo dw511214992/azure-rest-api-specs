@@ -127,3 +127,18 @@ uncomment the  `exclude-file` section below and add the file paths.
 # exclude-file: 
 #- $(this-folder)/Microsoft.Peering/preview/2019-06-01-preview/peering.json
 ```
+
+## trenton
+
+These settings apply only when `--trenton` is specified on the command line.
+
+``` yaml $(trenton)
+trenton:
+    cli-name: peering
+    azure_arm: true
+    license_header: MICROSOFT_MIT_NO_VERSION
+    payload_flattening_threshold: 2
+    namespace: peering
+    package-name: peering
+    clear_output_folder: false
+```
