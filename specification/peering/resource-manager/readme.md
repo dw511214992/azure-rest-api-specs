@@ -102,6 +102,10 @@ See configuration in [readme.go.md](./readme.go.md)
 
 See configuration in [readme.cli.md](./readme.cli.md)
 
+## Trenton
+
+See configuration in [readme.trenton.md](./readme.cli.md)
+
 ## Multi-API/Profile support for AutoRest v3 generators 
 
 AutoRest V3 generators require the use of `--tag=all-api-versions` to select api files.
@@ -128,17 +132,3 @@ uncomment the  `exclude-file` section below and add the file paths.
 #- $(this-folder)/Microsoft.Peering/preview/2019-06-01-preview/peering.json
 ```
 
-## trenton
-
-These settings apply only when `--trenton` is specified on the command line.
-
-``` yaml $(trenton)
-trenton:
-    cli-name: peering
-    azure_arm: true
-    license_header: MICROSOFT_MIT_NO_VERSION
-    payload_flattening_threshold: 2
-    namespace: peering
-    package-name: peering
-    clear_output_folder: false
-```
