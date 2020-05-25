@@ -131,3 +131,34 @@ uncomment the  `exclude-file` section below and add the file paths.
 #  - $(this-folder)/Microsoft.Example/stable/2010-01-01/somefile.json
 ```
 
+## Trenton
+
+These settings apply only when `--trenton` is specified on the command line.
+
+``` yaml $(trenton)
+trenton:
+  cli_name: WindowsIot
+  azure_arm: true
+  license_header: MICROSOFT_MIT_NO_VERSION
+  payload_flattening_threshold: 2
+  namespace: azure.mgmt.windowsiot
+  package_name: azure-mgmt-windowsiot
+  clear_output_folder: false
+overrides:
+  - where:
+      method: "Update"
+    set:
+      - BodyPosition: 2
+  - where:
+      method: "CreateOrUpdate"
+    set:
+      - BodyPosition: 2
+  - where:
+      property: "deviceName"
+    set:
+      - IdPortion: "DeviceServices"
+      - NameSwagger: "name"
+      - GoFieldName: "Name"
+      - GoVariableName: "name"
+      - SchemaName: "name"
+```

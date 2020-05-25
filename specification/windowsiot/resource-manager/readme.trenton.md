@@ -1,16 +1,14 @@
-## Trenton
+
+## trenton
 
 These settings apply only when `--trenton` is specified on the command line.
 
 ``` yaml $(trenton)
 trenton:
-  cli_name: WindowsIot
-  azure_arm: true
-  license_header: MICROSOFT_MIT_NO_VERSION
-  payload_flattening_threshold: 2
-  namespace: azure.mgmt.windowsiot
-  package_name: azure-mgmt-windowsiot
-  clear_output_folder: false
+    cli-name: windowsiot
+    package-name: windowsiot
+clear-output-folder: true
+output-folder: $(trenton-output-folder)/windowsiot
 overrides:
   - where:
       method: "Update"
@@ -24,8 +22,4 @@ overrides:
       property: "deviceName"
     set:
       - IdPortion: "DeviceServices"
-      - NameSwagger: "name"
-      - GoFieldName: "Name"
-      - GoVariableName: "name"
-      - SchemaName: "name"
 ```
