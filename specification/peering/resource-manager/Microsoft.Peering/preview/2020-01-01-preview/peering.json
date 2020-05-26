@@ -2811,17 +2811,11 @@
       }
     },
     "ResourceTags": {
-      "description": "The resource tags.",
       "type": "object",
-      "properties": {
-        "tags": {
-          "description": "Gets or sets the tags, a dictionary of descriptors arm object",
-          "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          }
-        }
-      }
+      "additionalProperties": {
+        "type": "string"
+      },
+      "description": "Tags are a list of key-value pairs that describe the resource"
     },
     "PeeringServiceCountryListResult": {
       "description": "The paginated list of peering service countries.",
