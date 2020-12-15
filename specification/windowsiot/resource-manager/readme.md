@@ -112,17 +112,3 @@ See configuration in [readme.ruby.md](./readme.ruby.md)
 
 See configuration in [readme.azureresourceschema.md](./readme.azureresourceschema.md)
 
-## trenton
-
-These settings apply only when `--trenton` is specified on the command line.
-
-``` yaml $(trenton)
-trenton:
-    cli-name: windowsiot
-    azure_arm: true
-    license_header: MICROSOFT_MIT_NO_VERSION
-    payload_flattening_threshold: 2
-    namespace: windowsiot
-    package-name: windowsiot
-    clear_output_folder: false
-```
