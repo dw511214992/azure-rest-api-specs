@@ -22,7 +22,7 @@
       "body": {
         "id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/my-resource-group",
         "name": "my-resource-group",
-        "location": "eastus",
+        "location": "$(location)",
         "properties": {
           "provisioningState": "Succeeded"
         }

@@ -1,0 +1,19 @@
+resourceName: workspace
+resourceType: Microsoft.OperationalInsights/workspaces
+
+requireResources:
+- require: resourceGroup
+
+resourceVariables:
+- name: workspaceName
+  default: workspace-test
+  replace:
+  - match: stringValueFromCapture
+    captureFrom: parameters.workspaceName
+  - match: resourceIdPath
+    pathSegment: workspaces
+- name: skuName
+  default: PerGB2018
+  replace:
+  - match: stringValueFromCapture
+    captureFrom: parameters.parameters.properties.sku.name

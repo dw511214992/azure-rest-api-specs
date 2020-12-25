@@ -1,0 +1,24 @@
+resourceName: resourceGroup
+resourcePath: /subscriptions/resourceGroups/
+
+requireResources:
+- require: location
+- require: subscription
+
+resourceVariables:
+- name: resourceGroupNamePrefix
+  type: string
+  default: rg-test-
+- name: resourceGroupName
+  fromVariable:
+    from: resourceGroupNamePrefix
+    appendRandom:
+      randomLength: 6
+      number: true
+      lowerCase: true
+      upperCase: true
+  replace:
+  - match: stringValueFromCapture
+    captureFrom: parameters.resourceGroupName
+  - match: resourceIdPath
+    pathSegment: resourceGroups

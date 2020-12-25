@@ -1,0 +1,10 @@
+resourceName: location
+
+resourceVariables:
+- name: location
+  type: string
+  default: westus
+  replace:
+  - match: propertyNameRegex
+    topLevelResourceProperty: true
+    regexMatch: "^location$"
