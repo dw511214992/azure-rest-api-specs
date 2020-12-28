@@ -1,0 +1,13 @@
+{
+  "parameters": {
+    "subscriptionId": "00000000-0000-0000-0000-000000000000",
+    "resourceGroupName": "my-resource-group",
+    "api-version": "2020-10-01",
+    "parameters": {
+      "location": "eastus"
+    }
+  },
+  "responses": {
+    "200": { }
+  }
+}

@@ -1,0 +1,4 @@
+scenarioName: workspace-export-create
+
+requireResources:
+- require: Microsoft.OperationalInsights/workspaces/export

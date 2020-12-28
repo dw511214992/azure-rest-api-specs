@@ -1,0 +1,5 @@
+importResources:
+- import: resource-location.yaml
+- import: ../resources/resource-manager/Microsoft.Resources/stable/2019-11-01/test-scenarios/resource-subscription.yaml
+- import: ../resources/resource-manager/Microsoft.Resources/stable/2020-10-01/test-scenarios/resource-resourcegroup.yaml
+- import: ../storage/resource-manager/Microsoft.Storage/stable/2019-06-01/test-scenarios/resource-storageaccount.yaml

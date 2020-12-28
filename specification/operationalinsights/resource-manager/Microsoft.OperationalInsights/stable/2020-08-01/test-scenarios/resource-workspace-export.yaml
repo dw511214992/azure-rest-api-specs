@@ -1,0 +1,18 @@
+resourceName: dataExport
+resourceType: Microsoft.OperationalInsights/workspaces/export
+
+requireResources:
+- require: Microsoft.OperationalInsights/workspaces
+- require: Microsoft.Storage/storageAccounts
+  optional: true
+  enableByVariable: useStorageAccount
+  enableByDefault: true
+
+resourceVariables:
+- name: dataExportName
+  default: export-test
+  replace:
+  - match: stringValueFromCapture
+    captureFrom: parameters.dataExportName
+  - match: resourceIdPath
+    pathSegment: export

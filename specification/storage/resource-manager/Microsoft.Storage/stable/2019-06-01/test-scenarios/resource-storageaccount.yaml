@@ -1,0 +1,17 @@
+resourcename: storageAccount
+resourceType: Microsoft.Storage/storageAccounts
+
+requireResources:
+- require: resourceGroup
+
+resourceVariables:
+- name: storageAccountNamePrefix
+  default: stotest
+- name: storageAccountName
+  fromVariable:
+    from: storageAccountNamePrefix
+    appendRandom:
+      randomLength: 6
+      number: false
+      lowerCase: true
+      upperCase: false

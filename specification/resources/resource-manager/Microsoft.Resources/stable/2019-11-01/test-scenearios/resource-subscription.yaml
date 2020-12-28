@@ -1,0 +1,19 @@
+resourceName: subscription
+
+provisionByDefault: false
+
+resourceVariables:
+- name: subscriptionId
+  type: string
+  format: "[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}"
+  default: 00000000-0000-0000-0000-000000000000
+  replace:
+  - match: stringValueFromCapture
+    captureFrom: parameters.subscriptionId
+  - match: resourceIdPath
+    pathSegment: subscriptions
+  - match: stringValueRegex
+    regexMatch: "/subscriptions/[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}/"
+    replace: /subscriptions/$(subscriptionId)/
+
+# Create subscription is not supported yet
